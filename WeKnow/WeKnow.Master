@@ -1,0 +1,152 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WeKnow.master.cs" Inherits="WeKnow.WeKnow" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>WeKnow</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+
+    <form id="form1" runat="server">
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid" style="background-color: #454444">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="#">WeKnow</a>
+                    <button style="margin-top: 7px; margin-left: 7px;" type="button" class="btn btn-success">Ask a Question</button>
+                    `
+                    <div style="width: 50%;">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for..." />
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Go!</button>
+                            </span>
+                        </div>
+                        <!-- /input-group -->
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Dropdown
+                            <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container-fluid" style="background-color: #454444;">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li style="margin-top: 15px; color: white; float: left;">Copyright &copy; WeKnow <%: DateTime.Now.Year %></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                       <li><a data-toggle="modal" data-target="#myModal1">About</a></li>
+                        <li><a data-toggle="modal" data-target="#myModal2">Site's Policy</a></li>
+                        <li><a href="Contact.aspx">Contact</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- About-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h1 class="bg-primary" style="text-align: center">About Us</h1>
+                </div>
+                <div class="modal-body">
+                    <p>At WeKnow, our premise is simple: we believe questions and answers are the building blocks of conversation, self-expression and deeper understanding.</p>
+                    <p>Through the natural exchange of questions and answers, WeKnow aims to be a safe, fun and engaging place for learning more about yourself and exploring the social world around you.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Policy-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h1 class="bg-primary" style="text-align: center">Terms</h1>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Age Requirements.<br />
+                        By accessing or using the Services, you affirm that you are either over the age of majority in your country, an emancipated minor, or possess legal parental or guardian consent, and are fully able and competent to enter into and comply with the terms and conditions in the TOU.</p>
+                    <p>
+                        Compliance with Laws.<br /> 
+                        You are responsible for making sure you follow all laws and regulations in the country in which you live when you access and use the Services. By using ASKfm, you are confirming that you have not been convicted of, nor are you subject to any court order relating to, assault, violence, sexual misconduct or harassment.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
